@@ -13,6 +13,8 @@
 		E1533B99281A44DA001D4CE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1533B97281A44DA001D4CE7 /* Main.storyboard */; };
 		E1533B9B281A44E0001D4CE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1533B9A281A44E0001D4CE7 /* Assets.xcassets */; };
 		E1533B9E281A44E0001D4CE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1533B9C281A44E0001D4CE7 /* LaunchScreen.storyboard */; };
+		E1533BAC281A4621001D4CE7 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1533BAB281A4621001D4CE7 /* DataManager.swift */; };
+		E1533BAE281A4679001D4CE7 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1533BAD281A4679001D4CE7 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E1533B9A281A44E0001D4CE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1533B9D281A44E0001D4CE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1533B9F281A44E0001D4CE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1533BAB281A4621001D4CE7 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E1533BAD281A4679001D4CE7 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		E1533B90281A44DA001D4CE7 /* Person list */ = {
 			isa = PBXGroup;
 			children = (
-				E1533B91281A44DA001D4CE7 /* AppDelegate.swift */,
-				E1533B93281A44DA001D4CE7 /* SceneDelegate.swift */,
-				E1533B95281A44DA001D4CE7 /* ViewController.swift */,
-				E1533B97281A44DA001D4CE7 /* Main.storyboard */,
-				E1533B9A281A44E0001D4CE7 /* Assets.xcassets */,
-				E1533B9C281A44E0001D4CE7 /* LaunchScreen.storyboard */,
+				E1533BA6281A4501001D4CE7 /* ViewControllers */,
+				E1533BA7281A451F001D4CE7 /* Storyboards */,
+				E1533BAA281A45A7001D4CE7 /* Servise */,
+				E1533BA9281A4599001D4CE7 /* Models */,
+				E1533BA8281A4568001D4CE7 /* Resourses */,
+				E1533BA5281A44F5001D4CE7 /* App */,
 				E1533B9F281A44E0001D4CE7 /* Info.plist */,
 			);
 			path = "Person list";
+			sourceTree = "<group>";
+		};
+		E1533BA5281A44F5001D4CE7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E1533B91281A44DA001D4CE7 /* AppDelegate.swift */,
+				E1533B93281A44DA001D4CE7 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E1533BA6281A4501001D4CE7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E1533B95281A44DA001D4CE7 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E1533BA7281A451F001D4CE7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E1533B97281A44DA001D4CE7 /* Main.storyboard */,
+				E1533B9C281A44E0001D4CE7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E1533BA8281A4568001D4CE7 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				E1533B9A281A44E0001D4CE7 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		E1533BA9281A4599001D4CE7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E1533BAD281A4679001D4CE7 /* Person.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E1533BAA281A45A7001D4CE7 /* Servise */ = {
+			isa = PBXGroup;
+			children = (
+				E1533BAB281A4621001D4CE7 /* DataManager.swift */,
+			);
+			path = Servise;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +192,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1533BAE281A4679001D4CE7 /* Person.swift in Sources */,
 				E1533B96281A44DA001D4CE7 /* ViewController.swift in Sources */,
+				E1533BAC281A4621001D4CE7 /* DataManager.swift in Sources */,
 				E1533B92281A44DA001D4CE7 /* AppDelegate.swift in Sources */,
 				E1533B94281A44DA001D4CE7 /* SceneDelegate.swift in Sources */,
 			);
