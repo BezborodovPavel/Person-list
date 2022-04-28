@@ -13,14 +13,14 @@ struct Person {
     let phone: String
     let email: String
     
+    static let dataManager = DataManager()
+    
     static func getPerson() -> Person? {
         
-        let dataManager = DataManager()
-        
-        guard let name = dataManager.getUniqueName() else {return nil}
-        guard let family = dataManager.getUniqueEmail() else {return nil}
-        guard let phone = dataManager.getUniquePhone() else {return nil}
-        guard let email = dataManager.getUniqueEmail() else {return nil}
+        guard let name = Person.dataManager.getUniqueName() else {return nil}
+        guard let family = Person.dataManager.getUniqueEmail() else {return nil}
+        guard let phone = Person.dataManager.getUniquePhone() else {return nil}
+        guard let email = Person.dataManager.getUniqueEmail() else {return nil}
 
         let person = Person(name: name, family: family, phone: phone, email: email)
         return person

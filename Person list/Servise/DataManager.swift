@@ -8,13 +8,8 @@
 import Foundation
 
 class DataManager {
-    
-    static var usedNames = 0
-    static var usedFamilys = 0
-    static var usedPhones = 0
-    static var usedEmails = 0
-    
-    let names = [
+     
+    var names = [
         "Сергей",
         "Алексей",
         "Дмитрий",
@@ -27,7 +22,7 @@ class DataManager {
         "Никита"
     ]
     
-    let familys = [
+    var familys = [
         "Воронов",
         "Кузнецов",
         "Малахов",
@@ -40,7 +35,7 @@ class DataManager {
         "Калинин"
     ]
     
-    let phones = [
+    var phones = [
         "375256612939",
         "375292308770",
         "380504180695",
@@ -143,7 +138,7 @@ class DataManager {
         "79169306671",
     ]
     
-    let emails = [
+    var emails = [
         "o@outlook.com",
         "hr6zdl@yandex.ru",
         "kaft93x@outlook.com",
@@ -252,41 +247,54 @@ extension DataManager {
     
     func getUniqueName() -> String? {
         
-        if names.count == DataManager.usedNames {
+        if names.count == 0 {
             return nil
         }
         
-        DataManager.usedNames += 1
-        return names[DataManager.usedNames]
+        let randomIndex = Int.random(in: 0...names.count)
+        let randomNames = names.remove(at: randomIndex)
+        
+
+        return randomNames
     }
-    
+ 
     func getUniqueFamily() -> String? {
         
-        if familys.count == DataManager.usedFamilys {
+        if familys.count == 0 {
             return nil
         }
         
-        DataManager.usedFamilys += 1
-        return familys[DataManager.usedNames]
+        let randomIndex = Int.random(in: 0...familys.count)
+        let randomFamily = familys.remove(at: randomIndex)
+        
+
+        return randomFamily
     }
-    
+
     func getUniquePhone() -> String? {
         
-        if phones.count == DataManager.usedPhones {
+        if phones.count == 0 {
             return nil
         }
         
-        DataManager.usedPhones += 1
-        return phones[DataManager.usedNames]
+        let randomIndex = Int.random(in: 0...phones.count)
+        let randomPhone = phones.remove(at: randomIndex)
+        
+
+        return randomPhone
     }
-    
+
     func getUniqueEmail() -> String? {
         
-        if emails.count == DataManager.usedEmails {
+        if emails.count == 0 {
             return nil
         }
         
-        DataManager.usedEmails += 1
-        return emails[DataManager.usedNames]
+        let randomIndex = Int.random(in: 0...emails.count)
+        let randomEmail = emails.remove(at: randomIndex)
+        
+
+        return randomEmail
     }
+
 }
