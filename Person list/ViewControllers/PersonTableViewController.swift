@@ -16,10 +16,6 @@ class PersonTableViewController: UITableViewController {
         
         navigationItem.title = person.fullName
     }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        1
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2

@@ -13,9 +13,6 @@ class PersonSectionsListViewController: UIViewController, UITableViewDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tabBarVC = tabBarController as! TabBarViewController
-        persons = tabBarVC.persons
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

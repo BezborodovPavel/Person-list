@@ -9,14 +9,10 @@ import UIKit
 
 class PersonListViewController: UITableViewController {
     
-    var persons: [Person]!
+    var persons: [Person] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tabBarVC = tabBarController as! TabBarViewController //Нужно ли здесь делать проверку и если проверка не пройдет то что делать, закрывать приложение?
-        persons = tabBarVC.persons
-        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {      
